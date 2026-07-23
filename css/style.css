@@ -274,6 +274,13 @@ a:hover { color: var(--accent); }
 /* Force base aspect, then vary */
 .project-card .thumb-wrap {
   aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.project-card .thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-card.short .thumb-wrap {

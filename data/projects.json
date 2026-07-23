@@ -1,0 +1,43 @@
+{
+  "site": {
+    "name": "Easemotion",
+    "tagline": "Motion & Illustration",
+    "description": "Motion design & illustration portfolio by Henry"
+  },
+  "motion": [
+    { "id": "cathay-pacific-rtbo", "title": "Cathay Pacific RTBO", "type": "vimeo", "video": "1130854677", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/10/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2_11-6-2025_183233_www.stiryourmind.com_.jpeg?fit=1447%2C603&ssl=1" },
+    { "id": "zen-portable", "title": "Bloomy Lotus — Zen Portable Air Purifier", "type": "vimeo", "video": "1074658361", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/zen-05.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "espedeo-supera", "title": "Espedeo Supera — 5000", "type": "vimeo", "video": "1074610162", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/projector_06.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "olay-pro-x", "title": "OLAY Pro X 無添加系列", "type": "vimeo", "video": "1074596406", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/OLAY-Pro-X-%E7%84%A1%E6%B7%BB%E5%8A%A0%E7%B3%BB%E5%88%97-01.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "kix-rebrand", "title": "KIX Channel Re-brand", "type": "vimeo", "video": "1074574558", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/City-test-kix-logo-01.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "kix-fight-club", "title": "KIX — Fight Club", "type": "youtube", "video": "CGehpFsKSUY", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/FC-02.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "kix-chinese-action", "title": "KIX — Chinese Action", "type": "youtube", "video": "fkarDZjBo0g", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/CA-04.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "kix-christmas", "title": "KIX — Christmas Special", "type": "youtube", "video": "HCf64aMjK_k", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/Comp-11-0-00-03-10.png?fit=1920%2C1080&ssl=1" },
+    { "id": "olay-cell-level", "title": "OLAY 細胞級修護防曬乳", "type": "vimeo", "video": "1074565753", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/olay-sea-weed.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "cm-plus-rebrand", "title": "CM+ TV Channel Rebrand", "type": "vimeo", "video": "1074175758", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/CM_02.jpg?fit=1280%2C720&ssl=1" },
+    { "id": "hkie-stem", "title": "HKIE — STEM Programme", "type": "vimeo", "video": "647230678", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/HKCA_04.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "art-in-motion", "title": "Art in Motion — Museum at Airport", "type": "vimeo", "video": "1073899351", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/Untitled-1.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "hkex-led", "title": "HKEX 香港交易所 LED Screen", "type": "vimeo", "video": "1073889652", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/Comp-1-0-00-44-21.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "nowtv-rebrand", "title": "NowTV 星影台 Rebrand", "type": "vimeo", "video": "1073876861", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2-2025-04-09-180047-copy.jpg?fit=1438%2C806&ssl=1" },
+    { "id": "mobiletalk-osaka", "title": "MobileTalk — Osaka", "type": "vimeo", "video": "215471282", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2-2025-04-09-170000-copy.jpg?fit=1434%2C807&ssl=1" },
+    { "id": "olay-diamond", "title": "Olay 鑽石彈力面膜", "type": "vimeo", "video": "311167832", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/Olay-02.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "tedxkowloon", "title": "TEDxKowloon 設計沙龍 Intro", "type": "vimeo", "video": "215471570", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2024/07/Tedx-feature.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "zhanxiang", "title": "展翔 — 綠色食品 香港品牌", "type": "vimeo", "video": "370818442", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2024/07/Artwork-S1-0-00-00-00-copy.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "sogo-family", "title": "SOGO Essential — 親子", "type": "vimeo", "video": "370247097", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2024/07/1795de80034113.5cd513c809810.jpg?fit=1400%2C832&ssl=1" },
+    { "id": "sogo-autumn", "title": "SOGO Essential — 紅葉", "type": "vimeo", "video": "370301578", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2024/07/Autum.jpg?fit=1920%2C1074&ssl=1" },
+    { "id": "sogo-hanami", "title": "SOGO Essential — お花見", "type": "vimeo", "video": "370266533", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2024/07/047b6080033505.5cd50e8eb4a70.jpg?fit=1400%2C990&ssl=1" },
+    { "id": "sogo-newyear", "title": "SOGO Essentials — 正月", "type": "vimeo", "video": "311168348", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2024/07/56e3a280030783.5cd4f3f48c19d.jpg?fit=1400%2C990&ssl=1" },
+    { "id": "lights-up", "title": "Lights Up — 建築投影 Mapping", "type": "image", "thumb": "images/projects/lights-up/LightsUp_webbannerTheMills-01.jpg" },
+    { "id": "cheng-kwok-kong", "title": "鄭國江 50+2周年 詞名一生演唱會2023", "type": "image", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/Untitled-2-2.jpg?fit=1920%2C1080&ssl=1" },
+    { "id": "philromantic", "title": "PhilRomantic Live In Concert 2018", "type": "image", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/phc.jpg?fit=960%2C540&ssl=1" },
+    { "id": "gigi-leung", "title": "GiGi Leung GoodTime World Tour", "type": "image", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/Untitled-2.jpg?fit=960%2C540&ssl=1" },
+    { "id": "andy-hui", "title": "Andy Hui Concert 2018 (Visual Dev)", "type": "image", "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/Overnight_test-a.png?fit=1920%2C1080&ssl=1" }
+  ],
+  "illustration": [
+    { "id": "kitkat", "title": "雀巢KIT KAT 香港特色系列", "type": "image", "images": ["images/projects/kitkat/kitkat 01.jpg", "images/projects/kitkat/46366154_10158874308409616_8623490668972474368_n.jpg", "images/projects/kitkat/74577640_2753181471392001_2103724914870583296_n.jpg", "images/projects/kitkat/74703496_2753175064725975_365069084833873920_n.jpg"], "thumb": "images/projects/kitkat/kitkat 01.jpg" },
+    { "id": "projector", "title": "Projector — 投影 Mapping 作品", "type": "image", "images": ["images/projects/projector/projector_01.jpg","images/projects/projector/projector_02.jpg","images/projects/projector/projector_03.jpg","images/projects/projector/projector_04.jpg","images/projects/projector/projector_05.jpg","images/projects/projector/projector_06.jpg","images/projects/projector/projector_07.jpg","images/projects/projector/projector_08.jpg","images/projects/projector/projector_09.jpg"], "thumb": "images/projects/projector/projector_05.jpg" },
+    { "id": "popcorn-retro", "title": "Popcorn Retro 復古電影頻道", "type": "image", "images": ["images/projects/popcorn-retro/moodboard 02.jpg","images/projects/popcorn-retro/Popcorn_retro_PG (0-00-00-00).jpg","images/projects/popcorn-retro/Popcorn_retro_R18 02 (0-00-00-00).jpg"], "thumb": "images/projects/popcorn-retro/moodboard 02.jpg" },
+    { "id": "hkca", "title": "HKCA 香港建築中心", "type": "image", "images": ["images/projects/hkca/HKCA_01.jpg","images/projects/hkca/HKCA_02.jpg","images/projects/hkca/HKCA_03.jpg","images/projects/hkca/HKCA_04.jpg"], "thumb": "images/projects/hkca/HKCA_01.jpg" },
+    { "id": "hsmc", "title": "HSMC 恒生管理學院 Graphics", "type": "image", "images": ["images/projects/hsmc/Full frame graphics 02.png","images/projects/hsmc/Fullframe info 2.png","images/projects/hsmc/overlay 2.png"], "thumb": "images/projects/hsmc/Full frame graphics 02.png" }
+  ]
+}

@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Gallery
       let galleryHtml = '';
-      if (project.gallery && project.gallery.length > 1) {
+      if (project.gallery && project.gallery.length > 0) {
         const sizeClasses = ['', ' tall', '', ' short', '', ' xl', ''];
         const galleryCards = project.gallery.map((img, i) => {
           const sc = sizeClasses[i % 7] || '';

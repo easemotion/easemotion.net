@@ -281,6 +281,7 @@ a:hover { color: var(--accent); }
 .project-card .thumb-wrap {
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .project-card .thumb-wrap img {

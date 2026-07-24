@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </section>`;
       }
 
-      // Gallery — JS masonry, zero gap, 960px width
+      // Gallery — CSS columns masonry, zero gap, 960px width
       let galleryHtml = '';
       if (project.gallery && project.gallery.length > 0) {
         const galleryCards = project.gallery.map((img, i) => {
@@ -220,9 +220,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ${relatedHtml}
       `;
 
-      // Run JS masonry after images load
+      // CSS columns masonry — no JS layout needed, handled entirely by CSS
       const gallery = document.querySelector('.gallery-masonry');
-      if (gallery) runMasonry(gallery);
+      if (gallery) gallery.classList.add('ready');
     })
     .catch(err => {
       document.getElementById('project-root').innerHTML = `
@@ -238,96 +238,5 @@ document.addEventListener('DOMContentLoaded', () => {
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
-  // ---- JS Masonry Layout ----
-  function runMasonry(container) {
-    const cards = [...container.querySelectorAll('.gallery-card')];
-    if (!cards.length) return;
-
-    // Wait for all images to load first
-    const imgs = cards.map(c => c.querySelector('img')).filter(Boolean);
-    const pending = imgs.filter(img => !img.complete || !img.naturalWidth);
-
-    if (pending.length > 0) {
-      let loaded = 0;
-      // Fallback: force layout after 3s even if images haven't loaded
-      const forceTimer = setTimeout(() => layoutMasonry(container, cards), 3000);
-      pending.forEach(img => {
-        img.addEventListener('load', () => {
-          loaded++;
-          if (loaded === pending.length) {
-            clearTimeout(forceTimer);
-            layoutMasonry(container, cards);
-          }
-        });
-        img.addEventListener('error', () => {
-          loaded++;
-          if (loaded === pending.length) {
-            clearTimeout(forceTimer);
-            layoutMasonry(container, cards);
-          }
-        });
-      });
-      return;
-    }
-
-    layoutMasonry(container, cards);
-  }
-
-  function layoutMasonry(container, cards) {
-    const w = container.offsetWidth;
-
-    // Responsive column count
-    let cols = 3;
-    if (w <= 480) cols = 1;
-    else if (w <= 768) cols = 2;
-
-    if (cols === 1) {
-      // Single column — natural stacking
-      cards.forEach(c => {
-        c.style.position = 'relative';
-        c.style.width = '';
-        c.style.left = '';
-        c.style.top = '';
-      });
-      container.style.height = '';
-      return;
-    }
-
-    const colW = w / cols;
-    const colH = new Array(cols).fill(0);
-
-    cards.forEach((card) => {
-      const img = card.querySelector('img');
-      // Find shortest column
-      let minCol = 0;
-      for (let c = 1; c < cols; c++) {
-        if (colH[c] < colH[minCol]) minCol = c;
-      }
-
-      card.style.position = 'absolute';
-      card.style.width = colW + 'px';
-      card.style.left = (minCol * colW) + 'px';
-      card.style.top = colH[minCol] + 'px';
-
-      // Calculate height from aspect ratio
-      if (img && img.naturalWidth) {
-        const ratio = img.naturalHeight / img.naturalWidth;
-        colH[minCol] += colW * ratio;
-      } else {
-        colH[minCol] += colW * 0.75; // fallback 4:3
-      }
-    });
-
-    container.style.height = Math.max(...colH) + 'px';
-  }
-
-  // Re-layout on resize
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      const container = document.querySelector('.gallery-masonry');
-      if (container) runMasonry(container);
-    }, 150);
-  });
+  // CSS Columns masonry — layout handled entirely by CSS, no JS needed
 });

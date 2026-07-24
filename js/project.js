@@ -81,7 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Fetch and render
-  fetch('data/projects.json')
+  const cacheBust = new Date().getTime();
+  fetch('data/projects.json?v=' + cacheBust)
     .then(r => r.json())
     .then(data => {
       const allProjects = [...data.motion, ...data.illustration];

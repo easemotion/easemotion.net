@@ -191,3 +191,45 @@
 .project-hero + .container .project-grid {
   margin-top: 0;
 }
+
+/* ============ Gallery Masonry — zero gap ============ */
+.gallery-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 0 60px;
+}
+
+.gallery-section .section-header {
+  padding: 0 0 16px;
+  margin: 0 0 0;
+}
+
+.gallery-masonry {
+  column-count: 3;
+  column-gap: 0;
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .gallery-masonry { column-count: 2; }
+}
+@media (max-width: 640px) {
+  .gallery-masonry { column-count: 1; }
+}
+
+.gallery-masonry .gallery-card {
+  break-inside: avoid-column;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  display: inline-block;
+  width: 100%;
+  line-height: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.gallery-masonry .gallery-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

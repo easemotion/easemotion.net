@@ -177,29 +177,25 @@ document.addEventListener('DOMContentLoaded', () => {
           </section>`;
       }
 
-      // Gallery
+      // Gallery — masonry, zero gap, 960px width (same as Vimeo embed)
       let galleryHtml = '';
       if (project.gallery && project.gallery.length > 0) {
-        const sizeClasses = ['', ' tall', '', ' short', '', ' xl', ''];
         const galleryCards = project.gallery.map((img, i) => {
-          const sc = sizeClasses[i % 7] || '';
           return `
-            <div class="project-card${sc}" onclick="openLightbox([${project.gallery.map((im,idx) => 
+            <div class="gallery-card" onclick="openLightbox([${project.gallery.map((im,idx) => 
               `{type:'image',src:'${escapeHtml(im)}',title:'${escapeHtml(project.title)}'}`
             ).join(',')}], ${i})">
-              <div class="thumb-wrap">
-                <img src="${escapeHtml(img)}" alt="${escapeHtml(project.title)}" loading="lazy" />
-              </div>
+              <img src="${escapeHtml(img)}" alt="${escapeHtml(project.title)}" loading="lazy" />
             </div>`;
         }).join('');
 
         galleryHtml = `
-          <section class="container page-section" style="padding-top:0;">
+          <section class="gallery-section">
             <div class="section-header">
               <h2>Gallery</h2>
               <span class="count">${project.gallery.length} images</span>
             </div>
-            <div class="project-grid">
+            <div class="gallery-masonry">
               ${galleryCards}
             </div>
           </section>`;

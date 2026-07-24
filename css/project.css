@@ -192,7 +192,7 @@
   margin-top: 0;
 }
 
-/* ============ Gallery Masonry — zero gap ============ */
+/* ============ Gallery Masonry — zero gap, full width ============ */
 .gallery-section {
   max-width: 960px;
   margin: 0 auto;
@@ -207,16 +207,14 @@
 .gallery-masonry {
   column-count: 3;
   column-gap: 0;
-  column-rule: 0;
   padding: 0;
-  font-size: 0;
   line-height: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .gallery-masonry { column-count: 2; }
 }
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .gallery-masonry { column-count: 1; }
 }
 
@@ -224,13 +222,9 @@
   break-inside: avoid-column;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
-  display: inline-block;
-  width: 100%;
-  vertical-align: top;
+  display: block;
   margin: 0;
   padding: 0;
-  line-height: 0;
-  font-size: 0;
   cursor: pointer;
   position: relative;
 }

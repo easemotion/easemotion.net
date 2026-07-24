@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h1>${escapeHtml(project.title)}</h1>
             <div class="project-meta">${metaHtml}</div>
             <div class="project-description">
-              <p>${escapeHtml(project.desc || '')}</p>
+              ${(project.desc || '').split('\n\n').filter(p => p.trim()).map(p => `<p>${escapeHtml(p.trim())}</p>`).join('\n              ')}
             </div>
           </div>
         </section>

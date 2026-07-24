@@ -454,7 +454,15 @@
       "desc": "Stage visual design for PhilRomantic Live In Concert 2018. Romantic and atmospheric motion graphics for a live music experience.",
       "client": "Concert",
       "year": "2018",
-      "cat": "Event Visual"
+      "cat": "Event Visual",
+      "gallery": [
+        "images/projects/philromantic/gallery/1541394567-a03.jpg",
+        "images/projects/philromantic/gallery/20181106113749_0_phil-aka-supergirls-photo-2.jpg",
+        "images/projects/philromantic/gallery/67402929_1427112357420453_4112531750264249079_n.jpg",
+        "images/projects/philromantic/gallery/phil lam 01.jpg",
+        "images/projects/philromantic/gallery/phil lam 02.jpg",
+        "images/projects/philromantic/gallery/phil lam 03.jpg"
+      ]
     },
     {
       "id": "gigi-leung",

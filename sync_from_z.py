@@ -23,6 +23,7 @@ Z_TO_PROJECT = {
     'Kitkat':              ['kitkat'],
     'light up':            ['lights-up'],
     'mobile talk':         ['mobiletalk-osaka'],
+    'Phil Concert 2018':   ['philromantic'],
     'Sogo':                ['sogo-autumn', 'sogo-hanami', 'sogo-newyear', 'sogo-family'],
     'HKCA':                ['hkca'],
     'HSMC':                ['hsmc'],

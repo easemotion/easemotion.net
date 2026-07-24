@@ -80,14 +80,7 @@
       "desc": "Complete channel rebrand package for KIX, including channel ID, promo toolkit, and on-air graphics package.",
       "client": "KIX (TV Channel)",
       "year": "2025",
-      "cat": "Channel Branding",
-      "gallery": [
-        "images/projects/kix-rebrand/gallery/FC 01.jpg",
-        "images/projects/kix-rebrand/gallery/FC 02.jpg",
-        "images/projects/kix-rebrand/gallery/FC 03.jpg",
-        "images/projects/kix-rebrand/gallery/FC 04.jpg",
-        "images/projects/kix-rebrand/gallery/FC 05.jpg"
-      ]
+      "cat": "Channel Branding"
     },
     {
       "id": "kix-fight-club",
@@ -98,14 +91,7 @@
       "desc": "Promotional video for KIX Fight Club programming. High-energy editing and bold typography capturing the intensity of combat sports entertainment.",
       "client": "KIX (TV Channel)",
       "year": "2025",
-      "cat": "Channel Promo",
-      "gallery": [
-        "images/projects/kix-fight-club/gallery/FC 01.jpg",
-        "images/projects/kix-fight-club/gallery/FC 02.jpg",
-        "images/projects/kix-fight-club/gallery/FC 03.jpg",
-        "images/projects/kix-fight-club/gallery/FC 04.jpg",
-        "images/projects/kix-fight-club/gallery/FC 05.jpg"
-      ]
+      "cat": "Channel Promo"
     },
     {
       "id": "kix-chinese-action",
@@ -116,14 +102,7 @@
       "desc": "Channel promo for KIX Chinese Action movie lineup. Cinematic montage showcasing martial arts and action cinema highlights.",
       "client": "KIX (TV Channel)",
       "year": "2025",
-      "cat": "Channel Promo",
-      "gallery": [
-        "images/projects/kix-chinese-action/gallery/FC 01.jpg",
-        "images/projects/kix-chinese-action/gallery/FC 02.jpg",
-        "images/projects/kix-chinese-action/gallery/FC 03.jpg",
-        "images/projects/kix-chinese-action/gallery/FC 04.jpg",
-        "images/projects/kix-chinese-action/gallery/FC 05.jpg"
-      ]
+      "cat": "Channel Promo"
     },
     {
       "id": "kix-christmas",
@@ -134,14 +113,7 @@
       "desc": "Festive season promo for KIX Christmas Special — Triple Action movie marathon. Holiday-themed motion design with an action-packed twist.",
       "client": "KIX (TV Channel)",
       "year": "2025",
-      "cat": "Channel Promo",
-      "gallery": [
-        "images/projects/kix-christmas/gallery/FC 01.jpg",
-        "images/projects/kix-christmas/gallery/FC 02.jpg",
-        "images/projects/kix-christmas/gallery/FC 03.jpg",
-        "images/projects/kix-christmas/gallery/FC 04.jpg",
-        "images/projects/kix-christmas/gallery/FC 05.jpg"
-      ]
+      "cat": "Channel Promo"
     },
     {
       "id": "olay-cell-level",
@@ -425,10 +397,11 @@
     },
     {
       "id": "lights-up",
-      "title": "Lights Up — 建築投影 Mapping",
-      "type": "image",
+      "title": "Lights Up｜Architectural Projection Mapping in Historical Buildings",
+      "type": "vimeo",
+      "video": "1074671011",
       "thumb": "images/projects/lights-up/LightsUp_webbannerTheMills-01.jpg",
-      "desc": "Architectural projection mapping project 'Lights Up' at The Mills, Hong Kong. Transforming historical building facades into dynamic canvases of light and motion.",
+      "desc": "Lights Up is an architectural projection mapping project and the first exposition of Lights Up was held at The Mills, the revitalized creative and cultural landmark that was once a textile mill. Invited by Daaimung Lab, we are delighted to take part in episode 2 and part of episode 4 of the project. Combining the visual texture of light and shade with the highlighted historical stories of Nam Fung Factory in 70s and 80s, we designed sets of 2D & 3D animation and architectural projection mapping to present the Mill in past, present and the future.",
       "client": "Lights Up / STIR Production",
       "year": "2021",
       "cat": "Projection Mapping",

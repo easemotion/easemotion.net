@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="gallery-card" data-index="${i}" onclick="openLightbox([${project.gallery.map((im,idx) =>
               `{type:'image',src:'${escapeHtml(im)}',title:'${escapeHtml(project.title)}'}`
             ).join(',')}], ${i})">
-              <img src="${escapeHtml(img)}" alt="${escapeHtml(project.title)}" loading="lazy" />
+              <img src="${escapeHtml(img)}" alt="${escapeHtml(project.title)}" />
             </div>`;
         }).join('');
 
@@ -249,14 +249,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (pending.length > 0) {
       let loaded = 0;
+      // Fallback: force layout after 3s even if images haven't loaded
+      const forceTimer = setTimeout(() => layoutMasonry(container, cards), 3000);
       pending.forEach(img => {
         img.addEventListener('load', () => {
           loaded++;
-          if (loaded === pending.length) layoutMasonry(container, cards);
+          if (loaded === pending.length) {
+            clearTimeout(forceTimer);
+            layoutMasonry(container, cards);
+          }
         });
         img.addEventListener('error', () => {
           loaded++;
-          if (loaded === pending.length) layoutMasonry(container, cards);
+          if (loaded === pending.length) {
+            clearTimeout(forceTimer);
+            layoutMasonry(container, cards);
+          }
         });
       });
       return;

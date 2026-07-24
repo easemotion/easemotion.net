@@ -178,13 +178,12 @@ document.addEventListener('DOMContentLoaded', () => {
           </section>`;
       }
 
-      // Gallery — JS masonry with image-load re-layout
+      // Gallery — uniform CSS grid, object-fit cover, zero whitespace
       let galleryHtml = '';
-      let galleryMasonry = null;
       if (project.gallery && project.gallery.length > 0) {
         const galleryCards = project.gallery.map((img, i) => {
           return `
-            <div class="gallery-card" data-index="${i}" onclick="openLightbox([${project.gallery.map((im,idx) =>
+            <div class="gallery-card" onclick="openLightbox([${project.gallery.map((im,idx) =>
               `{type:'image',src:'${escapeHtml(im)}',title:'${escapeHtml(project.title)}'}`
             ).join(',')}], ${i})">
               <img src="${escapeHtml(img)}" alt="${escapeHtml(project.title)}" loading="lazy" />
@@ -197,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <h2>Gallery</h2>
               <span class="count">${project.gallery.length} images</span>
             </div>
-            <div class="gallery-masonry">
+            <div class="gallery-grid">
               ${galleryCards}
             </div>
           </section>`;
@@ -220,10 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ${galleryHtml}
         ${relatedHtml}
       `;
-
-      // Run masonry layout
-      const container = document.querySelector('.gallery-masonry');
-      if (container) runMasonry(container);
     })
     .catch(err => {
       document.getElementById('project-root').innerHTML = `
@@ -238,92 +233,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!str) return '';
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
-
-  // ---- Masonry Layout with Per-Image Re-layout ----
-  let masonTimer = null;
-
-  function scheduleLayout(container, cards) {
-    if (masonTimer) clearTimeout(masonTimer);
-    masonTimer = setTimeout(() => layoutMasonry(container, cards), 50);
-  }
-
-  function runMasonry(container) {
-    const cards = [...container.querySelectorAll('.gallery-card')];
-    if (!cards.length) return;
-
-    // Initial layout immediately
-    layoutMasonry(container, cards);
-
-    // Re-layout whenever each image loads
-    cards.forEach(card => {
-      const img = card.querySelector('img');
-      if (!img) return;
-      if (!img.complete) {
-        img.addEventListener('load', () => scheduleLayout(container, cards));
-        img.addEventListener('error', () => scheduleLayout(container, cards));
-      }
-    });
-  }
-
-  function layoutMasonry(container, cards) {
-    const w = container.offsetWidth;
-    if (w === 0) return;
-
-    // Responsive column count: adapt to image count
-    const n = cards.length;
-    let cols = 3;
-    if (w <= 480) cols = 1;
-    else if (w <= 640) cols = 2;
-    else if (n <= 2) cols = n === 1 ? 1 : 2;
-
-    if (cols === 1) {
-      cards.forEach(c => {
-        c.style.position = 'relative';
-        c.style.width = '';
-        c.style.left = '';
-        c.style.top = '';
-      });
-      container.style.height = '';
-      return;
-    }
-
-    const gap = 0;
-    const colW = (w - gap * (cols - 1)) / cols;
-    const colH = new Array(cols).fill(0);
-
-    cards.forEach((card) => {
-      const img = card.querySelector('img');
-      // Find shortest column
-      let minCol = 0;
-      for (let c = 1; c < cols; c++) {
-        if (colH[c] < colH[minCol]) minCol = c;
-      }
-
-      card.style.position = 'absolute';
-      card.style.width = colW + 'px';
-      card.style.left = (minCol * (colW + gap)) + 'px';
-      card.style.top = colH[minCol] + 'px';
-
-      // Height from actual aspect ratio, or fallback
-      if (img && img.naturalWidth && img.naturalHeight) {
-        const ratio = img.naturalHeight / img.naturalWidth;
-        colH[minCol] += colW * ratio;
-      } else {
-        colH[minCol] += colW * 0.75; // fallback 4:3
-      }
-    });
-
-    container.style.height = Math.max(...colH) + 'px';
-    container.style.position = 'relative';
-  }
-
-  // Re-layout on resize
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      const container = document.querySelector('.gallery-masonry');
-      if (container) runMasonry(container);
-    }, 150);
-  });
 });

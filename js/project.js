@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </section>`;
       }
 
-      // Gallery — uniform CSS grid, object-fit cover, zero whitespace
+      // Gallery — CSS Columns Masonry (Pure CSS)
       let galleryHtml = '';
       if (project.gallery && project.gallery.length > 0) {
         const galleryCards = project.gallery.map((img, i) => {
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <h2>Gallery</h2>
               <span class="count">${project.gallery.length} images</span>
             </div>
-            <div class="gallery-grid">
+            <div class="gallery-masonry">
               ${galleryCards}
             </div>
           </section>`;

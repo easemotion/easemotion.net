@@ -192,7 +192,7 @@
   margin-top: 0;
 }
 
-/* ============ Gallery Grid — natural aspect ratio, no crop ============ */
+/* ============ Gallery — CSS Columns Masonry (Pure CSS) ============ */
 .gallery-section {
   max-width: 960px;
   margin: 0 auto;
@@ -204,27 +204,35 @@
   margin: 0 0 0;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-@media (max-width: 640px) {
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 400px) {
-  .gallery-grid { grid-template-columns: 1fr; }
-}
-
-.gallery-grid .gallery-card {
-  cursor: pointer;
-  overflow: hidden;
+.gallery-masonry {
+  column-count: 3;
+  column-gap: 8px;
+  column-fill: balance;
+  padding: 0;
   line-height: 0;
 }
 
-.gallery-grid .gallery-card img {
+@media (max-width: 640px) {
+  .gallery-masonry { column-count: 2; }
+}
+@media (max-width: 400px) {
+  .gallery-masonry { column-count: 1; }
+}
+
+.gallery-masonry .gallery-card {
+  break-inside: avoid-column;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 8px;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.gallery-masonry .gallery-card img {
   width: 100%;
   height: auto;
   display: block;
+  margin: 0;
+  padding: 0;
 }

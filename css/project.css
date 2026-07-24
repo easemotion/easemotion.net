@@ -205,28 +205,15 @@
 }
 
 .gallery-masonry {
-  column-count: 3;
-  column-gap: 0;
+  position: relative;
+  width: 100%;
   padding: 0;
   line-height: 0;
 }
 
-@media (max-width: 768px) {
-  .gallery-masonry { column-count: 2; }
-}
-@media (max-width: 480px) {
-  .gallery-masonry { column-count: 1; }
-}
-
 .gallery-masonry .gallery-card {
-  break-inside: avoid-column;
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-  display: block;
-  margin: 0;
-  padding: 0;
+  position: absolute;
   cursor: pointer;
-  position: relative;
 }
 
 .gallery-masonry .gallery-card img {

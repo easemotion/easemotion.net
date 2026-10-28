@@ -47,11 +47,22 @@
       "title": "Espedeo Supera — 5000",
       "type": "vimeo",
       "video": "1074610162",
-      "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/projector_06.jpg?fit=1920%2C1080&ssl=1",
+      "thumb": "images/projects/espedeo-supera/gallery/projector_01.jpg",
       "desc": "Motion design for Espedeo Supera 5000 product launch. Dynamic visuals highlighting product features and performance specifications.",
       "client": "Espedeo",
       "year": "2025",
-      "cat": "Product Launch"
+      "cat": "Product Launch",
+      "gallery": [
+        "images/projects/espedeo-supera/gallery/projector_01.jpg",
+        "images/projects/espedeo-supera/gallery/projector_02.jpg",
+        "images/projects/espedeo-supera/gallery/projector_03.jpg",
+        "images/projects/espedeo-supera/gallery/projector_04.jpg",
+        "images/projects/espedeo-supera/gallery/projector_05.jpg",
+        "images/projects/espedeo-supera/gallery/projector_06.jpg",
+        "images/projects/espedeo-supera/gallery/projector_07.jpg",
+        "images/projects/espedeo-supera/gallery/projector_08.jpg",
+        "images/projects/espedeo-supera/gallery/projector_09.jpg"
+      ]
     },
     {
       "id": "olay-pro-x",
@@ -184,11 +195,15 @@
       "title": "HKIE — STEM Programme",
       "type": "vimeo",
       "video": "647230678",
-      "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/HKCA_04.jpg?fit=1920%2C1080&ssl=1",
+      "thumb": "images/projects/hkie-stem/gallery/hkie-stem_02.jpg",
       "desc": "Educational motion graphics for The Hong Kong Institution of Engineers' STEM Programme. Making engineering concepts accessible and engaging for young audiences.",
       "client": "HKIE",
       "year": "2025",
-      "cat": "Educational"
+      "cat": "Educational",
+      "gallery": [
+        "images/projects/hkie-stem/gallery/hkie-stem_02.jpg",
+        "images/projects/hkie-stem/gallery/hkie-stem_03.jpg"
+      ]
     },
     {
       "id": "art-in-motion",
@@ -289,22 +304,32 @@
       "title": "TEDxKowloon 設計沙龍 Intro",
       "type": "vimeo",
       "video": "215471570",
-      "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2024/07/Tedx-feature.jpg?fit=1920%2C1080&ssl=1",
+      "thumb": "images/projects/tedxkowloon/gallery/Tedx-01.webp",
       "desc": "Concept and Art Direction: Javin Mo\nTypeface designer: Roman Wilhelm (Hong Kong Street Face / 香港馬路體）\nMotion graphics: Henry Chiu\nMusic: Roman Wilhelm",
       "client": "TEDxKowloon",
       "year": "2024",
-      "cat": "Event Visual"
+      "cat": "Event Visual",
+      "gallery": [
+        "images/projects/tedxkowloon/gallery/Tedx-01.webp",
+        "images/projects/tedxkowloon/gallery/Tedx-03.webp",
+        "images/projects/tedxkowloon/gallery/Tedx-feature.webp",
+        "images/projects/tedxkowloon/gallery/Tedx-grid.webp"
+      ]
     },
     {
       "id": "zhanxiang",
       "title": "展翔 — 綠色食品 香港品牌",
       "type": "vimeo",
       "video": "370818442",
-      "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2024/07/Artwork-S1-0-00-00-00-copy.jpg?fit=1920%2C1080&ssl=1",
+      "thumb": "images/projects/zhanxiang/gallery/zhanxiang_01.jpg",
       "desc": "Brand video for 展翔 (Zhan Xiang) — a Hong Kong green food brand. Organic, natural visual language celebrating wholesome food and sustainable living.",
       "client": "展翔",
       "year": "2024",
-      "cat": "Brand Video"
+      "cat": "Brand Video",
+      "gallery": [
+        "images/projects/zhanxiang/gallery/zhanxiang_01.jpg",
+        "images/projects/zhanxiang/gallery/zhanxiang_03.jpg"
+      ]
     },
     {
       "id": "sogo-family",
@@ -415,11 +440,23 @@
       "id": "cheng-kwok-kong",
       "title": "鄭國江 50+2周年 詞名一生演唱會2023",
       "type": "image",
-      "thumb": "https://i0.wp.com/easemotion.net/wp-content/uploads/2025/04/Untitled-2-2.jpg?fit=1920%2C1080&ssl=1",
+      "thumb": "images/projects/cheng-kwok-kong/gallery/Comp-2-0-00-00-00.webp",
       "desc": "Concert visual design for 鄭國江 (Cheng Kwok Kong) 50+2 Anniversary — '詞名一生' (A Lifetime of Lyrics) 2023. Stage visuals complementing the legendary lyricist's timeless words.",
       "client": "Concert",
       "year": "2023",
-      "cat": "Event Visual"
+      "cat": "Event Visual",
+      "gallery": [
+        "images/projects/cheng-kwok-kong/gallery/Comp-2-0-00-00-00.webp",
+        "images/projects/cheng-kwok-kong/gallery/Comp-3-0-00-00-00.webp",
+        "images/projects/cheng-kwok-kong/gallery/IMG_6944_edited.avif",
+        "images/projects/cheng-kwok-kong/gallery/Untitled-1 copy.jpg",
+        "images/projects/cheng-kwok-kong/gallery/Untitled-2.jpg",
+        "images/projects/cheng-kwok-kong/gallery/jpg_00000_3.webp",
+        "images/projects/cheng-kwok-kong/gallery/stars copy.jpg",
+        "images/projects/cheng-kwok-kong/gallery/位位歌手都希望有朝一日上紅館開個唱-0-00-00-00.webp",
+        "images/projects/cheng-kwok-kong/gallery/尋找到另一半嘅夫妻領悟到，乜都稱心滿意，-鹹魚白菜也好好味。_00000.webp",
+        "images/projects/cheng-kwok-kong/gallery/等天王巨星，每個都獨當一面，響舞台上大放異彩。.webp"
+      ]
     },
     {
       "id": "philromantic",

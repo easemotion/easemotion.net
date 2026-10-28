@@ -1,15 +1,36 @@
 #!/usr/bin/env python3
-"""Sync gallery images from Z:\Portfolio to website, then update projects.json.
-   Mapping: Z:\Portfolio folder -> website project ID(s)"""
+"""Sync gallery images from the local portfolio library into the website.
+
+   Source root: the first existing path in SOURCE_ROOTS (override with the
+   PORTFOLIO_ROOT environment variable). The old Z:\\Portfolio network drive
+   no longer mounts; H:\\Portfolio holds the same folder layout.
+
+   Then rebuilds projects.json from what is actually on disk, so the site can
+   never end up referencing an image that is not there.
+"""
 
 import json, os, shutil, sys
 
-Z_PORTFOLIO = 'Z:/Portfolio'
+# Try locations in order - first one that exists wins.
+# Override any time with:  PORTFOLIO_ROOT="X:/somewhere" python sync_from_z.py
+SOURCE_ROOTS = [
+    os.environ.get('PORTFOLIO_ROOT', ''),
+    'H:/Portfolio',
+    'Z:/Portfolio',
+]
+PORTFOLIO = next((p for p in SOURCE_ROOTS if p and os.path.isdir(p)), None)
 WEBSITE_IMG = 'images/projects'
 JSON_PATH = 'data/projects.json'
+IMG_EXT = ('.jpg', '.jpeg', '.png', '.gif', '.webp')
 
-# Mapping: Z:\Portfolio folder name -> list of website project IDs
-Z_TO_PROJECT = {
+if not PORTFOLIO:
+    sys.exit("ERROR: no portfolio source found. Tried: "
+             + ", ".join(p for p in SOURCE_ROOTS if p)
+             + "\nSet PORTFOLIO_ROOT to override.")
+print(f"Source: {PORTFOLIO}")
+
+# Mapping: source folder name -> list of website project IDs
+SRC_TO_PROJECT = {
     'Cathy':               ['cathay-pacific-rtbo'],
     'Zen':                 ['zen-portable'],
     'OLAY Pro X 無添加系列': ['olay-pro-x'],
@@ -33,10 +54,10 @@ Z_TO_PROJECT = {
 total_copied = 0
 total_deleted = 0
 
-for z_folder, project_ids in Z_TO_PROJECT.items():
-    z_path = os.path.join(Z_PORTFOLIO, z_folder)
+for z_folder, project_ids in SRC_TO_PROJECT.items():
+    z_path = os.path.join(PORTFOLIO, z_folder)
     if not os.path.isdir(z_path):
-        print(f"⚠ Z:\\Portfolio\\{z_folder} not found, skipping")
+        print(f"  ! {z_folder} not found under {PORTFOLIO}, skipping")
         continue
     
     # Get all image files from Z:

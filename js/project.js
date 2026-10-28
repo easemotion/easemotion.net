@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Related works (same category, exclude current)
       const categoryProjects = isMotion ? data.motion : data.illustration;
       const related = categoryProjects
-        .filter(p => p.id !== projectId)
+        .filter(p => p.id !== projectId && p.thumb && !p.thumb.startsWith('http'))
         .sort(() => Math.random() - 0.5)
         .slice(0, 3);
 

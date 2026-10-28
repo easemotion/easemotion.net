@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('data/projects.json')
     .then(r => r.json())
     .then(data => {
-      const all = [...data.motion, ...data.illustration];
+      // Only projects that actually have a thumbnail (skip WP-dead / imageless entries)
+      const all = [...data.motion, ...data.illustration]
+        .filter(p => p.thumb && !p.thumb.startsWith('http'));
 
       // Shuffle (Fisher-Yates)
       for (let i = all.length - 1; i > 0; i--) {
@@ -34,7 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
           <a href="project.html?id=${escapeHtml(p.id)}" class="project-card${sizeClass}">
             <div class="thumb-wrap">
-              <img src="${thumb}" alt="${title}" loading="lazy" />
+              <img src="${thumb}" alt="${title}" loading="lazy" decoding="async"
+                   onerror="this.closest('.project-card').style.display='none'" />
               ${playBtn}
             </div>
             <div class="overlay">
